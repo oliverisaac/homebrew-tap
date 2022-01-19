@@ -5,21 +5,21 @@
 class ItermCmd < Formula
   desc "Generate files that contain commands and be cmd-clicked inside iTerm2"
   homepage "https://github.com/oliverisaac/iterm-cmd"
-  version "1.0.6"
+  version "1.0.7"
   depends_on :macos
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/oliverisaac/iterm-cmd/releases/download/v1.0.6/iterm-cmd_1.0.6_darwin_arm64.tar.gz"
-      sha256 "a5568f7c99513d3651f0a70a1b64499de2eac39b09153e75cf09d7045de0fd40"
+      url "https://github.com/oliverisaac/iterm-cmd/releases/download/v1.0.7/iterm-cmd_1.0.7_darwin_arm64.tar.gz"
+      sha256 "e9ca16412cb3e44fc48d512cd597e51f777dac7d91dc045b5121e6375e31401c"
 
       def install
         bin.install "iterm-cmd"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/oliverisaac/iterm-cmd/releases/download/v1.0.6/iterm-cmd_1.0.6_darwin_x86_64.tar.gz"
-      sha256 "d126f90147e1f0cb118373463819210aa557ceae32e8975b76eb5fae363db76d"
+      url "https://github.com/oliverisaac/iterm-cmd/releases/download/v1.0.7/iterm-cmd_1.0.7_darwin_x86_64.tar.gz"
+      sha256 "1383ca8f13a0b773f93b17032ae47483ab6691ffa9a2c53b3593d9f8dc50ada8"
 
       def install
         bin.install "iterm-cmd"
