@@ -5,21 +5,21 @@
 class Koi < Formula
   desc "Kubectl wrapper command"
   homepage "https://github.com/oliverisaac/koi"
-  version "0.0.5"
+  version "0.0.6"
   depends_on :macos
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/oliverisaac/koi/releases/download/v0.0.5/koi_0.0.5_darwin_arm64.tar.gz"
-      sha256 "e876dd74967c97f08bd72ec2ca58e1c1a8ed35e4c7023e4cfe1a20449057d858"
+      url "https://github.com/oliverisaac/koi/releases/download/v0.0.6/koi_0.0.6_darwin_arm64.tar.gz"
+      sha256 "a9a2fbad03fe5b55127be65ea72021a127bf36fd3b1e0cf286c8538e668da59f"
 
       def install
         bin.install "koi"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/oliverisaac/koi/releases/download/v0.0.5/koi_0.0.5_darwin_x86_64.tar.gz"
-      sha256 "ce87ac949fc2500f4b104e7e2b8b500ced93ca860aec2bbd1ff2cb1b34ebc699"
+      url "https://github.com/oliverisaac/koi/releases/download/v0.0.6/koi_0.0.6_darwin_x86_64.tar.gz"
+      sha256 "f3101fef3b0cab16c465a4a46add2e5004292160f502fc119364a804be8e1304"
 
       def install
         bin.install "koi"
