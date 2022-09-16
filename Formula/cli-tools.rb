@@ -1,6 +1,7 @@
 class CliTools < Formula
   head "github.com/oliverisaac/cli-tools", :using => :git
-  url "github.com/oliverisaac/cli-tools", :using => :git
+  url "https://github.com/oliverisaac/cli-tools/archive/refs/tags/v1.0.2.tar.gz"
+  sha256 "d1edfe94804acdd57c6c3d0a00a3cdd2786bcb458c294a435c6efae92be724d1"
 
   depends_on "coreutils" 
   depends_on "oliverisaac/koi" 
