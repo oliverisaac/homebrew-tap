@@ -1,5 +1,6 @@
 class CliTools < Formula
   head "github.com/oliverisaac/cli-tools", :using => :git
+  url "github.com/oliverisaac/cli-tools", :using => :git
 
   depends_on "coreutils" 
   depends_on "oliverisaac/koi" 
