@@ -3,7 +3,7 @@ class CliTools < Formula
 
   depends_on "coreutils" 
   depends_on "oliverisaac/koi" 
-  depends_on :bash = >"5" 
+  depends_on "bash" 
   depends_on "jq" 
 
   bin.install "./lword"
