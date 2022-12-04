@@ -5,13 +5,13 @@
 class Tgrep < Formula
   desc "Grep command with easy to use templates and automatic escaping of special characters"
   homepage "https://github.com/oliverisaac/tgrep"
-  version "0.0.8"
+  version "0.0.9"
   depends_on :macos
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/oliverisaac/tgrep/releases/download/v0.0.8/tgrep_0.0.8_darwin_arm64.tar.gz"
-      sha256 "a2db948ddb44f997c7d770a9b1127c813da552e92c04face075140958a3a60ed"
+      url "https://github.com/oliverisaac/tgrep/releases/download/v0.0.9/tgrep_0.0.9_darwin_arm64.tar.gz"
+      sha256 "80654edcedc54836f2648c87a8d470d4cbe7dce63e5160c7bc617ed9c36349bd"
 
       def install
         bin.install "tg"
@@ -19,8 +19,8 @@ class Tgrep < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/oliverisaac/tgrep/releases/download/v0.0.8/tgrep_0.0.8_darwin_x86_64.tar.gz"
-      sha256 "a029165d20500d1e761f36cd86474c83a8483275b0b6fbe9e14bb85b34d6caeb"
+      url "https://github.com/oliverisaac/tgrep/releases/download/v0.0.9/tgrep_0.0.9_darwin_x86_64.tar.gz"
+      sha256 "d320080d154193cf491dc5669f0d5f6c30c81df58738cf5a39e7ab361ba13ca6"
 
       def install
         bin.install "tg"
