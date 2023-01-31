@@ -1,7 +1,7 @@
 class CliTools < Formula
   head "github.com/oliverisaac/cli-tools", :using => :git
-  url "https://github.com/oliverisaac/cli-tools/archive/refs/tags/v1.0.6.tar.gz"
-  sha256 "95ba05cccc843e0a0bc77e226115c135e5a60cb54a23b0cfbba8040e1318633a"
+  url "https://github.com/oliverisaac/cli-tools/archive/refs/tags/v1.0.7.tar.gz"
+  sha256 "2f6d17eea61e16485859d79b547caff8656cf64f319969e87791f97ccf07e17e"
 
   depends_on "coreutils" 
   depends_on "oliverisaac/tap/koi" 
@@ -34,6 +34,7 @@ class CliTools < Formula
     bin.install "./tg"
     bin.install "./currns"
     bin.install "./bb"
+    bin.install "./vedit"
     bin.install "./save-secret"
     bin.install "./purr"
     bin.install "./word-password"
