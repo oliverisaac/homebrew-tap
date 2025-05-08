@@ -5,22 +5,38 @@
 class Koi < Formula
   desc "Kubectl wrapper command"
   homepage "https://github.com/oliverisaac/koi"
-  version "0.0.13"
-  depends_on :macos
+  version "0.0.17"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/oliverisaac/koi/releases/download/v0.0.13/koi_0.0.13_darwin_arm64.tar.gz"
-      sha256 "cf7fe77c1e2a87960b304ed885d76f9292bbae4f737fa3157b1b1c203da14fd5"
+    if Hardware::CPU.intel?
+      url "https://github.com/oliverisaac/koi/releases/download/v0.0.17/koi_0.0.17_darwin_amd64.tar.gz"
+      sha256 "ffc2d7024a5afcdd277344af45182feaee82cb8af466977391184662b8c9b471"
 
       def install
         bin.install "koi"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/oliverisaac/koi/releases/download/v0.0.13/koi_0.0.13_darwin_x86_64.tar.gz"
-      sha256 "3858af3391c761e56c3ce669152b88ae150f7189348ccd2b4e99d881a26cb789"
+    if Hardware::CPU.arm?
+      url "https://github.com/oliverisaac/koi/releases/download/v0.0.17/koi_0.0.17_darwin_arm64.tar.gz"
+      sha256 "50962f9f8003b1d4c71c70822eb82eac682d032cec9cd143332a9cfc995739e3"
 
+      def install
+        bin.install "koi"
+      end
+    end
+  end
+
+  on_linux do
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/oliverisaac/koi/releases/download/v0.0.17/koi_0.0.17_linux_amd64.tar.gz"
+      sha256 "dbf57fbfe707db94123c763a409d20eb5a1516f0f9aa89f30a75bf4f58d52230"
+      def install
+        bin.install "koi"
+      end
+    end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/oliverisaac/koi/releases/download/v0.0.17/koi_0.0.17_linux_arm64.tar.gz"
+      sha256 "b4782095fb1b5b624a481e5c39b01211641763ee7ccdcad36d4908349192f363"
       def install
         bin.install "koi"
       end
