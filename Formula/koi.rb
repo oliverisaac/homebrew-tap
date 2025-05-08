@@ -5,20 +5,20 @@
 class Koi < Formula
   desc "Kubectl wrapper command"
   homepage "https://github.com/oliverisaac/koi"
-  version "0.0.17"
+  version "0.0.18"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/oliverisaac/koi/releases/download/v0.0.17/koi_0.0.17_darwin_amd64.tar.gz"
-      sha256 "ffc2d7024a5afcdd277344af45182feaee82cb8af466977391184662b8c9b471"
+      url "https://github.com/oliverisaac/koi/releases/download/v0.0.18/koi_0.0.18_darwin_amd64.tar.gz"
+      sha256 "23ac74d94818ac28e2c8d10109767cfaae8fa1be72117454a91f3311eaa92efe"
 
       def install
         bin.install "koi"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/oliverisaac/koi/releases/download/v0.0.17/koi_0.0.17_darwin_arm64.tar.gz"
-      sha256 "50962f9f8003b1d4c71c70822eb82eac682d032cec9cd143332a9cfc995739e3"
+      url "https://github.com/oliverisaac/koi/releases/download/v0.0.18/koi_0.0.18_darwin_arm64.tar.gz"
+      sha256 "08d73b667c401f388343779b943af94a269e18f2a0ddebad415f1026780a1c32"
 
       def install
         bin.install "koi"
@@ -28,15 +28,15 @@ class Koi < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/oliverisaac/koi/releases/download/v0.0.17/koi_0.0.17_linux_amd64.tar.gz"
-      sha256 "dbf57fbfe707db94123c763a409d20eb5a1516f0f9aa89f30a75bf4f58d52230"
+      url "https://github.com/oliverisaac/koi/releases/download/v0.0.18/koi_0.0.18_linux_amd64.tar.gz"
+      sha256 "fc6d06b06c0c845e71f5c7b7d1d3c18b0a35987a6d9dd49abbf36d4fb334eca9"
       def install
         bin.install "koi"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/oliverisaac/koi/releases/download/v0.0.17/koi_0.0.17_linux_arm64.tar.gz"
-      sha256 "b4782095fb1b5b624a481e5c39b01211641763ee7ccdcad36d4908349192f363"
+      url "https://github.com/oliverisaac/koi/releases/download/v0.0.18/koi_0.0.18_linux_arm64.tar.gz"
+      sha256 "99249ed3d5849e6a682e3f73bd07c4f508ec06ad6e3b6c122d1dcddab57fce52"
       def install
         bin.install "koi"
       end
