@@ -5,40 +5,48 @@
 class Koi < Formula
   desc "Kubectl wrapper command"
   homepage "https://github.com/oliverisaac/koi"
-  version "0.0.18"
+  version "0.0.19"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/oliverisaac/koi/releases/download/v0.0.18/koi_0.0.18_darwin_amd64.tar.gz"
-      sha256 "23ac74d94818ac28e2c8d10109767cfaae8fa1be72117454a91f3311eaa92efe"
+      url "https://github.com/oliverisaac/koi/releases/download/v0.0.19/koi_0.0.19_darwin_amd64.tar.gz"
+      sha256 "ccb0617af988a4d423ae34e8615acb2086b72b7b8049d74c08c8eb1b912484f4"
 
       def install
         bin.install "koi"
+        bin.install_symlink "koi" => "kcontainers"
+        bin.install_symlink "koi" => "kshell"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/oliverisaac/koi/releases/download/v0.0.18/koi_0.0.18_darwin_arm64.tar.gz"
-      sha256 "08d73b667c401f388343779b943af94a269e18f2a0ddebad415f1026780a1c32"
+      url "https://github.com/oliverisaac/koi/releases/download/v0.0.19/koi_0.0.19_darwin_arm64.tar.gz"
+      sha256 "3cef8a250f1fff1361397ddc6aff60a2de9b6d515ff0bf221cbceacfd06b3dec"
 
       def install
         bin.install "koi"
+        bin.install_symlink "koi" => "kcontainers"
+        bin.install_symlink "koi" => "kshell"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/oliverisaac/koi/releases/download/v0.0.18/koi_0.0.18_linux_amd64.tar.gz"
-      sha256 "fc6d06b06c0c845e71f5c7b7d1d3c18b0a35987a6d9dd49abbf36d4fb334eca9"
+      url "https://github.com/oliverisaac/koi/releases/download/v0.0.19/koi_0.0.19_linux_amd64.tar.gz"
+      sha256 "5872c3816cd7bfa618fa6eb221d26437beba7f6bdb81702d858c4aed84d7bf61"
       def install
         bin.install "koi"
+        bin.install_symlink "koi" => "kcontainers"
+        bin.install_symlink "koi" => "kshell"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/oliverisaac/koi/releases/download/v0.0.18/koi_0.0.18_linux_arm64.tar.gz"
-      sha256 "99249ed3d5849e6a682e3f73bd07c4f508ec06ad6e3b6c122d1dcddab57fce52"
+      url "https://github.com/oliverisaac/koi/releases/download/v0.0.19/koi_0.0.19_linux_arm64.tar.gz"
+      sha256 "0f11acadbb3593a74407178d0f443ddd70eb82e003904c4d155733c82d2b9942"
       def install
         bin.install "koi"
+        bin.install_symlink "koi" => "kcontainers"
+        bin.install_symlink "koi" => "kshell"
       end
     end
   end
